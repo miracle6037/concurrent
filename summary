@@ -1,0 +1,15 @@
+1. Thread.sleep(long millis)
+让当前现场休眠若干时间，会抛出InterruptedException异常必须捕捉，
+当线程在sleep休眠时，如果被中断，这个异常就会产生，当异常产生是会清除中断标记。
+
+2. Thread.stop()
+会立刻终止当前线程，并释放当前线程所持有的锁
+
+3. Object.wait()
+首先获取锁然后让当前线程进入等待，被notify唤醒,wait方法被执行后立刻释放锁
+
+4. Object.notify()
+随机唤醒Object等待队列中的一个线程
+
+5. Object.notifyAll()
+唤醒Object等待队列中所有线程
